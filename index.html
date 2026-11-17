@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeNet | Digital Security</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="#home" class="logo">Safe<span>Net.</span></a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Buka menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-content">
+            <p class="menu-label">NAVIGATION</p>
+            <a href="#home"><span>01</span> Beranda</a>
+            <a href="#gallery"><span>02</span> Gallery</a>
+            <a href="#about"><span>03</span> Tentang Kami</a>
+            <a href="#education"><span>04</span> Edukasi Digital</a>
+            <a href="#contact"><span>05</span> Kontak</a>
+        </div>
+    </div>
+
+    <!-- HORIZONTAL PAGE CONTAINER -->
+    <main class="horizontal-container" id="horizontalContainer">
+
+        <!-- BERANDA -->
+        <section class="page hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">DIGITAL SECURITY AWARENESS</span>
+
+                <h1>
+                    Explore The<br>
+                    Digital World<br>
+                    <span>Safely.</span>
+                </h1>
+
+                <p>
+                    Kenali dunia digital, lindungi informasi pribadi,
+                    dan jadilah pengguna internet yang lebih cerdas
+                    bersama SafeNet.
+                </p>
+
+                <a href="#gallery" class="primary-btn">
+                    Explore Gallery <span>→</span>
+                </a>
+
+                <div class="hero-footer">
+                    <span>01 / 05</span>
+                    <span>SCROLL TO EXPLORE ↓</span>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200"
+                    alt="Teknologi digital"
+                >
+                <div class="image-caption">
+                    <span>01</span>
+                    <p>SECURE YOUR DIGITAL LIFE</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section class="page gallery-page" id="gallery">
+            <div class="section-top">
+                <div>
+                    <span class="eyebrow">OUR COLLECTION</span>
+                    <h2>Digital <span>Gallery.</span></h2>
+                    <p>Kumpulan visual tentang teknologi dan keamanan digital.</p>
+                </div>
+
+                <div class="gallery-controls">
+                    <button id="prevBtn" aria-label="Foto sebelumnya">←</button>
+                    <button id="nextBtn" aria-label="Foto berikutnya">→</button>
+                </div>
+            </div>
+
+            <div class="gallery-track" id="galleryTrack">
+
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=900" alt="Cyber security">
+                    <div class="gallery-info">
+                        <span>01 / SECURITY</span>
+                        <h3>Cyber Security</h3>
+                        <p>Menjaga keamanan dunia digital.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=900" alt="Digital privacy">
+                    <div class="gallery-info">
+                        <span>02 / PRIVACY</span>
+                        <h3>Digital Privacy</h3>
+                        <p>Melindungi informasi pribadi.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900" alt="Technology">
+                    <div class="gallery-info">
+                        <span>03 / TECHNOLOGY</span>
+                        <h3>Technology</h3>
+                        <p>Perkembangan teknologi masa kini.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=900" alt="Computer security">
+                    <div class="gallery-info">
+                        <span>04 / DIGITAL WORLD</span>
+                        <h3>Digital World</h3>
+                        <p>Mengenal dunia internet.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=900" alt="Programming">
+                    <div class="gallery-info">
+                        <span>05 / PROGRAMMING</span>
+                        <h3>Programming</h3>
+                        <p>Teknologi dan pengembangan digital.</p>
+                    </div>
+                </article>
+
+                <article class="gallery-card">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=900" alt="Digital network">
+                    <div class="gallery-info">
+                        <span>06 / NETWORK</span>
+                        <h3>Digital Network</h3>
+                        <p>Koneksi dalam dunia digital.</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="gallery-bottom">
+                <div class="gallery-progress">
+                    <div id="progressBar"></div>
+                </div>
+                <span id="galleryCounter">01 / 06</span>
+            </div>
+
+            <!-- UPLOAD -->
+            <div class="upload-area">
+                <div>
+                    <h3>My Personal Gallery</h3>
+                    <p>Tambahkan foto koleksimu sendiri.</p>
+                </div>
+
+                <label for="imageUpload" class="upload-btn">
+                    + Upload Foto
+                </label>
+
+                <input type="file" id="imageUpload" accept="image/*" multiple hidden>
+            </div>
+
+            <div class="uploaded-gallery" id="uploadedGallery"></div>
+
+        </section>
+
+        <!-- TENTANG KAMI -->
+        <section class="page about-page" id="about">
+            <div class="about-image">
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1000"
+                    alt="Aktivitas digital"
+                >
+            </div>
+
+            <div class="about-content">
+                <span class="eyebrow">ABOUT SAFENET</span>
+                <h2>Know More.<br><span>Stay Secure.</span></h2>
+
+                <p>
+                    SafeNet merupakan platform edukasi yang memberikan
+                    informasi mengenai pentingnya keamanan digital
+                    dalam kehidupan sehari-hari.
+                </p>
+
+                <p>
+                    Kami mengajak setiap pengguna internet untuk lebih
+                    peduli terhadap privasi, keamanan akun, dan
+                    perlindungan data pribadi.
+                </p>
+
+                <div class="about-features">
+                    <div>
+                        <span>01</span>
+                        <p>Digital Awareness</p>
+                    </div>
+                    <div>
+                        <span>02</span>
+                        <p>Data Protection</p>
+                    </div>
+                    <div>
+                        <span>03</span>
+                        <p>Internet Safety</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUKASI -->
+        <section class="page education-page" id="education">
+            <div class="education-heading">
+                <span class="eyebrow">LEARN AND PROTECT</span>
+                <h2>Digital <span>Education.</span></h2>
+                <p>Kenali ancaman dan pelajari cara melindungi dirimu.</p>
+            </div>
+
+            <div class="education-grid">
+
+                <div class="education-card">
+                    <div class="edu-icon">🔐</div>
+                    <span>01 / PASSWORD</span>
+                    <h3>Password Security</h3>
+                    <p>
+                        Gunakan kata sandi yang kuat, unik, dan berbeda
+                        untuk setiap akun penting.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-icon">🎣</div>
+                    <span>02 / PHISHING</span>
+                    <h3>Beware of Phishing</h3>
+                    <p>
+                        Periksa tautan dan identitas pengirim sebelum
+                        membuka pesan yang mencurigakan.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-icon">🛡️</div>
+                    <span>03 / PRIVACY</span>
+                    <h3>Protect Your Data</h3>
+                    <p>
+                        Jangan sembarangan membagikan informasi
+                        pribadi kepada orang lain.
+                    </p>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-icon">🌐</div>
+                    <span>04 / INTERNET</span>
+                    <h3>Safe Browsing</h3>
+                    <p>
+                        Gunakan situs terpercaya dan selalu perhatikan
+                        keamanan saat menjelajah internet.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- KONTAK -->
+        <section class="page contact-page" id="contact">
+            <div class="contact-content">
+                <span class="eyebrow">THANK YOU FOR VISITING</span>
+                <h2>Stay Smart.<br><span>Stay Safe.</span></h2>
+
+                <p>
+                    Terima kasih telah mengunjungi SafeNet.
+                    Mari bersama menciptakan lingkungan digital
+                    yang lebih aman dan bertanggung jawab.
+                </p>
+
+                <button class="primary-btn" id="thankBtn">
+                    Terima Kasih
+                </button>
+
+                <h3 id="thankMessage"></h3>
+            </div>
+
+            <div class="contact-footer">
+                <span>SafeNet.</span>
+                <span>© 2026 DIGITAL SECURITY AWARENESS</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX FOTO -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="closeLightbox">×</button>
+        <img id="lightboxImage" src="" alt="Foto diperbesar">
+        <p id="lightboxCaption"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
